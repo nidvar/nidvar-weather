@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import Box from './Box';
 
 class Weather extends React.Component{
     state={
@@ -33,10 +34,10 @@ class Weather extends React.Component{
                 params: {
                     query:`${lat},${long}`,
                     access_key: `${this.state.key}`,
-                    units: 'f'
+                    units: 'm'
                 }
             })
-            console.log(response.data)
+            console.log(response.data.current.weather_descriptions)
             this.setState({
                 show_results:true,
                 selected_city: response.data
@@ -73,15 +74,20 @@ class Weather extends React.Component{
         }
         if(this.state.show_results==true){
             const x = this.state.selected_city.current
-            console.log(x)
             return (
                 <div>
-                    <p><span class='results'>Humidity: </span>{x.humidity}</p>
-                    <p><span class='results'>Temperature: </span>{x.temperature}</p>
-                    <p><span class='results'>Precipitation: </span>{x.precip}</p>
-                    <p><span class='results'>Description: </span>{x.weather_descriptions}</p>
-                    <p><span class='results'>Wind speed: </span>{x.wind_speed}</p>
-                    <p><span class='results'>Observation Time: </span>{x.observationTime}</p>
+                    <Box data={'Description'} data_value={x.weather_descriptions} temperature = {x.temperature} />
+                    <div className='stats'>
+                        <div className='statsbox'>
+                            <p><span className='results'>Humidity: </span>{x.humidity}%</p>
+                            <p><span className='results'>Precipitation: </span>{x.precip}%</p>
+                        </div>
+                        <div className='statsbox'>
+                            <p><span className='results'>Wind speed: </span>{x.wind_speed}km/h</p>
+                            <p><span className='results'>Observation Time: </span>{x.observation_time}</p>
+                        </div>
+                    </div>
+
                 </div>
             )
         }
@@ -91,11 +97,14 @@ class Weather extends React.Component{
             <div>
                 <div className='myform'>
                     <form onSubmit={this.handleSubmit}>
-                        <input type="text" onChange={this.handleChange} value={this.state.target} />
-                        <button>SEARCH</button>
+                    <div className="input-group mb-3">
+                        <input type="text" onChange={this.handleChange} value={this.state.target} className="form-control" placeholder="Enter Location" aria-label="Recipient's username" aria-describedby="basic-addon2" />
+                        <div className="input-group-append">
+                            <button className="btn btn-primary" type="button" onClick={this.handleSubmit}>SEARCH</button>
+                        </div>
+                    </div>
                     </form>
                 </div>
-
                 <div className='results_box'>
                     {this.display_location()}
                 </div>

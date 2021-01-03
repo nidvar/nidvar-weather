@@ -1,19 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 body{
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 p{
     text-align:center;
+    margin:10px;
 }
 .myform{
     text-align: center;
-    width:700px;
-    background-color:wheat;
-    margin:0 auto 20px auto;
+    width:500px;
+    margin:40px auto 40px auto;
 }
 .locationname{
     cursor: pointer;
-    max-width:350px;
     text-align:center;
 }
 .locationname:hover{
@@ -24,13 +23,27 @@ p{
     text-align:center;
 }
 .results_box{
-    background-color:skyblue;
     width:700px;
     margin:auto;
     text-align:center;
 }
 h1{
+    background-color:rgba(1,35,69,0.85);
+    color:white;
     text-align: center;
     font-weight:lighter;
     font-size:50px;
+    padding:40px;
+}
+.stats{
+    display:flex;
+    margin:auto;
+    justify-content: center;
+}
+.statsbox{
+    margin:0 10px 0 10px;
+}
+img{
+    height:300px;
+    width:300px;
 }

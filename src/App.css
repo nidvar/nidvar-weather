@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+body{
+    font-family: 'Open Sans', sans-serif;
+}
+p{
+    text-align:center;
+}
+.myform{
+    text-align: center;
+    width:700px;
+    background-color:wheat;
+    margin:0 auto 20px auto;
+}
+.locationname{
+    cursor: pointer;
+    max-width:350px;
+    text-align:center;
+}
+.locationname:hover{
+	box-shadow:1px 1px 1px gray;
+}
+.results{
+    font-weight:bolder;
+    text-align:center;
+}
+.results_box{
+    background-color:skyblue;
+    width:700px;
+    margin:auto;
+    text-align:center;
+}
+h1{
+    text-align: center;
+    font-weight:lighter;
+    font-size:50px;
+}

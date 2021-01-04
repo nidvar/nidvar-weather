@@ -1,38 +1,130 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+p{
+    text-align:center;
+}
+.myform{
+    text-align: center;
+    width:500px;
+    margin:40px auto 40px auto;
+}
+.locationname{
+    cursor: pointer;
+    text-align:center;
+    line-height: 50px;
+}
+.locationname:hover{
+	box-shadow:1px 1px 1px gray;
+}
+.results{
+    font-weight:bolder;
+    text-align:center;
+}
+.results_box{
+    width:700px;
+    margin:auto;
+    text-align:center;
+}
+h1{
+    background-color:rgba(1,35,69,0.85);
+    color:white;
+    text-align: center;
+    font-weight:lighter;
+    font-size:50px;
+    padding:40px;
+}
+.stats{
+    display:flex;
+    margin:auto;
+    justify-content: center;
+}
+.statsbox{
+    margin:0 10px 0 10px;
+}
+img{
+    height:300px;
+    width:300px;
+}
+.homebutton{
+    text-align:center;
+    margin:auto;
+    display:flex;
+    flex-direction:column;
+}
+.hometext p{
+    margin:20px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+@media only screen and (max-width: 600px) {
+    body {
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+    }
+    p{
+        text-align:center;
+    }
+    .myform{
+        text-align: center;
+        width:100%;
+        margin:40px auto 40px auto;
+    }
+    .locationname{
+        cursor: pointer;
+        text-align:center;
+        line-height: 50px;
+    }
+    .locationname:hover{
+        box-shadow:1px 1px 1px gray;
+    }
+    .results{
+        font-weight:bolder;
+        text-align:center;
+    }
+    .results_box{
+        width:100%;
+        margin:auto;
+        text-align:center;
+    }
+    h1{
+        background-color:rgba(1,35,69,0.85);
+        color:white;
+        text-align: center;
+        font-weight:lighter;
+        font-size:50px;
+        padding:40px;
+    }
+    .stats{
+        display:flex;
+        margin:auto;
+        justify-content: center;
+    }
+    .statsbox{
+        margin:0 10px 0 10px;
+    }
+    img{
+        height:300px;
+        width:300px;
+    }
+    .homebutton{
+        text-align:center;
+        margin:auto;
+        display:flex;
+        flex-direction:column;
+    }
+    .hometext p{
+        margin:20px;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}

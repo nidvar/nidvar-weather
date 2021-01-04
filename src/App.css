@@ -4,7 +4,6 @@ body{
 }
 p{
     text-align:center;
-    margin:10px;
 }
 .myform{
     text-align: center;
@@ -14,6 +13,7 @@ p{
 .locationname{
     cursor: pointer;
     text-align:center;
+    line-height: 50px;
 }
 .locationname:hover{
 	box-shadow:1px 1px 1px gray;
@@ -47,3 +47,84 @@ img{
     height:300px;
     width:300px;
 }
+.homebutton{
+    text-align:center;
+    margin:auto;
+    display:flex;
+    flex-direction:column;
+}
+.hometext p{
+    margin:20px;
+}
+
+@media only screen and (max-width: 600px) {
+    body {
+
+    }
+    p{
+        text-align:center;
+    }
+    .myform{
+        text-align: center;
+        width:100%;
+        margin:40px auto 40px auto;
+    }
+    .locationname{
+        cursor: pointer;
+        text-align:center;
+        line-height: 50px;
+    }
+    .locationname:hover{
+        box-shadow:1px 1px 1px gray;
+    }
+    .results{
+        font-weight:bolder;
+        text-align:center;
+    }
+    .results_box{
+        width:100%;
+        margin:auto;
+        text-align:center;
+    }
+    h1{
+        background-color:rgba(1,35,69,0.85);
+        color:white;
+        text-align: center;
+        font-weight:lighter;
+        font-size:50px;
+        padding:40px;
+    }
+    .stats{
+        display:flex;
+        margin:auto;
+        justify-content: center;
+    }
+    .statsbox{
+        margin:0 10px 0 10px;
+    }
+    img{
+        height:300px;
+        width:300px;
+    }
+    .homebutton{
+        text-align:center;
+        margin:auto;
+        display:flex;
+        flex-direction:column;
+    }
+    .hometext p{
+        margin:20px;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+  }
